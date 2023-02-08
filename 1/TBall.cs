@@ -56,7 +56,9 @@ namespace OOP_LAB_1
         }
         public override bool ContainsPoint(TPoint point)
         {
-            return (point.x - center.x) * (point.x - center.x) + (point.y - center.y) * (point.y - center.y) + (point.z - center.z) * (point.z - center.z) <= radius * radius;
+            return (point.x - center.x) * (point.x - center.x) + 
+                   (point.y - center.y) * (point.y - center.y) + 
+                   (point.z - center.z) * (point.z - center.z) <= radius * radius;
         }
     }
 }

@@ -56,7 +56,8 @@ namespace OOP_LAB_1
         }
 
         public virtual bool ContainsPoint(TPoint point) {
-            return (point.x - center.x) * (point.x - center.x) + (point.y - center.y) * (point.y - center.y) <= radius * radius;
+            return (point.x - center.x) * (point.x - center.x) + 
+                   (point.y - center.y) * (point.y - center.y) <= radius * radius;
         }
 
         public static TCircle operator +(TCircle circle1, TCircle circle2) {
@@ -71,7 +72,7 @@ namespace OOP_LAB_1
         public static TCircle operator -(TCircle circle1, TCircle circle2) {
             TCircle newCircle = new()
             {
-                radius = circle1.radius + circle2.radius,
+                radius = circle1.radius - circle2.radius,
                 center = new TPoint(circle1.center)
             };
             return newCircle;
