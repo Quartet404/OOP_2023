@@ -28,8 +28,9 @@ namespace OOP_LAB_2
                     for (int j = 0; j < n; ++j) { 
                         arr[i][j] = Convert.ToDouble(input_str[j]);
                     }
+                    
                 }
-
+                Console.WriteLine();
             }
             catch
             {
@@ -39,8 +40,8 @@ namespace OOP_LAB_2
 
             double tmp = double.NaN;
             for (int i = 1; i < n; ++i) {
-                tmp = 0;
-                for (int j = i; j < n; ++j) {
+                tmp = double.NaN;
+                for (int j = 1; j < n+1-i; ++j) {
                     if (arr[j][j] > arr[j - 1][j - 1]) {
                         tmp = arr[j][j];
                         arr[j][j] = arr[j - 1][j - 1];
